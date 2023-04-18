@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        foo: [1, 2, 3]
+        bar: [a, b, c]
+
+    steps:
+      - name: loop
+        run: |
+          run: |
+            for i in {1..10}; do
+              echo $(date)
+              sleep 1
+            done
